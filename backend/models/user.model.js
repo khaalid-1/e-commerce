@@ -46,7 +46,6 @@ const userSchema = new mongoose.Schema({
     timestamps:true
 })
 
-const User = mongoose.model("User",userSchema);
 
 userSchema.pre("save",async function(next){
 
@@ -66,5 +65,6 @@ userSchema.pre("save",async function(next){
 userSchema.methods.comparePassword = async function(passowrd){
     return await bcrypt.compare(passowrd,this.password);
 }
+const User = mongoose.model("User",userSchema);
 
 export default User;

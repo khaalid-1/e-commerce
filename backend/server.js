@@ -5,6 +5,9 @@ import authRoutes from "./routers/auth.route.js";
 import connectionDB from "./config/db.js"
 const app = express()
 connectionDB();
+
+// Middlewares
+app.use(express.json());
 app.use("/api/auth",authRoutes);
 
  app.listen(config.port,()=>{
