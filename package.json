@@ -2,10 +2,10 @@
   "name": "e-commerce",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
-    "start": "node ./backend/server.JS",
-    "dev": "nodemon ./backend/server.JS"
+    "start": "node ./backend/server.js",
+    "dev": "nodemon ./backend/server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +14,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cloudinary": "^2.5.1",
+    "colors": "^1.4.0",
     "cookie-parser": "^1.4.7",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
